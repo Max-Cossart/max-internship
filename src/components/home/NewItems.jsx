@@ -39,7 +39,6 @@ const NewItems = () => {
     const response = await axios.get(
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems`
     );
-    console.log(response.data)
     setNewItems(response.data);
     setLoading(true);
   }
@@ -47,7 +46,6 @@ const NewItems = () => {
   useEffect(() => {
     fetchNFT();
   }, []);
-
 
   return (
     <section id="section-items" className="no-bottom">
